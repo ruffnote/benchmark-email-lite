@@ -335,8 +335,9 @@ class benchmarkemaillite_widget extends WP_Widget {
 			$fields[] = array( 'id' => $id, 'label' => $label, 'value' => $value );
 		}
 
+		$template = apply_filters('benchmarkemaillite_widget_frontend_template', dirname( __FILE__ ) . '/../views/widget.frontend.html.php');
 		// Output Widget
-		require( dirname( __FILE__ ) . '/../views/widget.frontend.html.php');
+		require($template);
 	}
 
 
